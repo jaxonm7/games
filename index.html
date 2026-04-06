@@ -9,22 +9,24 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #121212; /* Dark background */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             color: white;
+            overflow-x: hidden;
         }
 
         /* Header / Logo Section */
         header {
             display: flex;
             justify-content: flex-end;
-            padding: 20px 40px;
+            padding: 25px 50px;
         }
 
         .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            letter-spacing: 2px;
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
         .jax { color: white; }
@@ -32,16 +34,22 @@
 
         /* Main Content */
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px;
             text-align: center;
         }
 
         h1.section-title {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            font-weight: 300;
+            font-size: 2.8rem;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            padding-bottom: 10px;
         }
 
         /* Button Grid Layout */
@@ -49,7 +57,13 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
+        }
+
+        /* The Link Wrapper - keeps layout clean */
+        .game-link {
+            text-decoration: none;
+            display: block;
         }
 
         /* Game Button Styling */
@@ -57,16 +71,17 @@
             width: 200px;
             height: 200px;
             background-color: #1e1e1e;
-            border: 3px solid transparent; /* Hidden until hover */
-            border-radius: 15px;
+            border: 4px solid transparent;
+            border-radius: 20px;
             overflow: hidden;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 0;
             outline: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
         .game-button img {
@@ -76,17 +91,16 @@
             transition: transform 0.3s ease;
         }
 
-        /* Hover State */
-        .game-button:hover {
-            border-color: #ff8080; /* Light Red Outline */
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 128, 128, 0.2);
+        /* Hover State applied via the link */
+        .game-link:hover .game-button {
+            border-color: #ff8080; 
+            transform: scale(1.08) translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 77, 77, 0.3);
         }
 
-        .game-button:hover img {
-            transform: scale(1.05);
+        .game-link:hover img {
+            transform: scale(1.1);
         }
-
     </style>
 </head>
 <body>
@@ -101,21 +115,29 @@
         <h1 class="section-title">Popular Games</h1>
 
         <div class="game-grid">
-            <button class="game-button">
-                <img src="gtag.jpeg" alt="Gorilla Tag">
-            </button>
+            <a href="jaxonm7.github.io/gtag/" class="game-link">
+                <button class="game-button">
+                    <img src="gtag.jpeg" alt="Gorilla Tag">
+                </button>
+            </a>
 
-            <button class="game-button">
-                <img src="https://via.placeholder.com/200" alt="Block Blast">
-            </button>
+            <a href="YOUR_LINK_HERE" class="game-link">
+                <button class="game-button">
+                    <img src="blockblast.png" alt="Block Blast">
+                </button>
+            </a>
 
-            <button class="game-button">
-                <img src="https://via.placeholder.com/200" alt="Game 3">
-            </button>
+            <a href="YOUR_LINK_HERE" class="game-link">
+                <button class="game-button">
+                    <img src="https://via.placeholder.com/200/222222/ffffff?text=Game+3" alt="Game 3">
+                </button>
+            </a>
 
-            <button class="game-button">
-                <img src="https://via.placeholder.com/200" alt="Game 4">
-            </button>
+            <a href="YOUR_LINK_HERE" class="game-link">
+                <button class="game-button">
+                    <img src="https://via.placeholder.com/200/222222/ffffff?text=Game+4" alt="Game 4">
+                </button>
+            </a>
         </div>
     </div>
 
